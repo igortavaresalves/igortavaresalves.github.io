@@ -23,29 +23,36 @@ Gera os arquivos estáticos em `dist/`.
 
 ## Publicar (escolha uma opção)
 
-### Opção 1 — Vercel (recomendado, mais rápido)
+Todas as opções abaixo são **gratuitas**. O único custo opcional, em qualquer uma delas, é registrar um domínio próprio depois (tipo `igortavares.dev`, ~R$50-70/ano) — não é obrigatório, o domínio gratuito que cada serviço dá já funciona normalmente.
 
-1. Crie uma conta gratuita em [vercel.com](https://vercel.com) (pode entrar com a conta do GitHub).
-2. Suba este projeto para um repositório no seu GitHub:
+### Opção 1 — GitHub Pages (já configurado neste projeto)
+
+1. Crie um repositório **vazio** no GitHub chamado exatamente `igortavaresalves.github.io` (esse nome exato faz o site publicar direto na raiz, sem subpasta na URL).
+   - Se preferir outro nome de repositório (ex: `portfolio`), funciona também, mas a URL fica `igortavaresalves.github.io/portfolio` e é preciso adicionar `base: '/portfolio/'` em `vite.config.ts` antes de buildar.
+2. Suba o projeto:
    ```bash
-   git remote add origin https://github.com/igortavaresalves/portfolio.git
+   git remote add origin https://github.com/igortavaresalves/igortavaresalves.github.io.git
    git branch -M main
    git push -u origin main
    ```
-3. No painel da Vercel, clique em "Add New Project", selecione o repositório e clique em "Deploy". A Vercel detecta Vite automaticamente — não precisa configurar nada.
-4. Em alguns minutos o site está no ar em um domínio `*.vercel.app`. Dá pra adicionar um domínio próprio depois, em "Settings → Domains".
+3. Publique com um comando (já está configurado no `package.json`):
+   ```bash
+   npm run deploy
+   ```
+   Isso builda o projeto e sobe o conteúdo de `dist/` para a branch `gh-pages` automaticamente.
+4. No GitHub, em Settings → Pages, confirme que a fonte está apontando para a branch `gh-pages`. Em 1-2 minutos o site está no ar em `https://igortavaresalves.github.io`.
 
-### Opção 2 — Netlify
+### Opção 2 — Vercel (mais rápido, deploy automático a cada push)
+
+1. Crie uma conta gratuita em [vercel.com](https://vercel.com) (pode entrar com a conta do GitHub).
+2. Suba este projeto para um repositório no seu GitHub (como no passo 2 da Opção 1, com o nome que preferir).
+3. No painel da Vercel, clique em "Add New Project", selecione o repositório e clique em "Deploy". A Vercel detecta Vite automaticamente — não precisa configurar nada.
+4. Em alguns minutos o site está no ar em um domínio `*.vercel.app`, e qualquer novo `git push` atualiza o site sozinho.
+
+### Opção 3 — Netlify
 
 1. Crie uma conta em [netlify.com](https://netlify.com).
 2. Arraste a pasta `dist/` (após rodar `npm run build`) direto para o painel da Netlify — ou conecte o repositório do GitHub do mesmo jeito que na Vercel.
-
-### Opção 3 — GitHub Pages
-
-1. Suba o projeto para um repositório no GitHub (ver passo 2 da Opção 1).
-2. Instale o pacote de deploy: `npm install -D gh-pages`.
-3. No `package.json`, adicione `"homepage": "https://igortavaresalves.github.io/portfolio"` e um script `"deploy": "vite build && gh-pages -d dist"`.
-4. Rode `npm run deploy`.
 
 ## Estrutura
 
