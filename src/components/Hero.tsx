@@ -1,5 +1,4 @@
 import { HERO, SITE, type Lang } from "../content";
-import { Constellation } from "./Constellation";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "./icons";
 
 export function Hero({ lang }: { lang: Lang }) {
@@ -42,7 +41,8 @@ export function Hero({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        <Constellation className="w-full h-[340px] sm:h-[460px] lg:h-[620px] lg:scale-110" />
+        {/* Space for the particle brain, drawn by the fixed ParticleField behind the page. */}
+        <div className="hidden lg:block h-[620px]" aria-hidden="true" />
       </div>
     </section>
   );

@@ -68,3 +68,10 @@ button:focus-visible {
     scroll-behavior: auto;
   }
 }
+
+/* Keeps body copy legible over the particle field. */
+main p,
+main li,
+footer p {
+  text-shadow: 0 0 12px #000, 0 0 4px #000;
+}

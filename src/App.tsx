@@ -8,14 +8,16 @@ import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { Footer } from "./components/Footer";
+import { ParticleField } from "./components/particles/ParticleField";
 
 function App() {
   const [lang, setLang] = useState<Lang>("pt");
 
   return (
     <div className="min-h-screen bg-void text-bone">
+      <ParticleField />
       <Header lang={lang} setLang={setLang} />
-      <main>
+      <main className="relative">
         <Hero lang={lang} />
         <About lang={lang} />
         <CaseStudies lang={lang} />
@@ -23,7 +25,9 @@ function App() {
         <Projects lang={lang} />
         <Skills lang={lang} />
       </main>
-      <Footer lang={lang} />
+      <div className="relative">
+        <Footer lang={lang} />
+      </div>
     </div>
   );
 }

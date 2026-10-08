@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ABOUT, SITE, type Lang } from "../content";
 import { SectionHeading } from "./SectionHeading";
+import { GitHubIcon, LinkedInIcon } from "./icons";
 
 export function About({ lang }: { lang: Lang }) {
   const [lead, ...rest] = ABOUT[lang];
@@ -21,12 +22,30 @@ export function About({ lang }: { lang: Lang }) {
       <div className="grid lg:grid-cols-2 gap-16">
         <div className="self-start">
           {hasPhoto && (
-            <img
-              src={SITE.photo}
-              alt={SITE.name}
-              onError={() => setHasPhoto(false)}
-              className="w-full max-w-[420px] aspect-[4/5] object-cover rounded-3xl mb-14"
-            />
+            // Profile card: portrait, role label and name, no frame or background.
+            <figure className="max-w-[420px] mb-16">
+              <img
+                src={SITE.photo}
+                alt={SITE.name}
+                onError={() => setHasPhoto(false)}
+                className="w-full aspect-[4/5] object-cover rounded-3xl mb-6"
+              />
+              <figcaption>
+                <p className="text-caption uppercase tracking-[0.025em] text-iris mb-2">
+                  {lang === "pt" ? "Backend & IA · " : "Backend & AI · "}
+                  {SITE.location[lang]}
+                </p>
+                <p className="text-heading-xs font-normal text-bone mb-3">{SITE.name}</p>
+                <div className="flex items-center gap-4 text-ash">
+                  <a href={SITE.github} target="_blank" rel="noreferrer" className="hover:text-bone transition-colors" aria-label="GitHub">
+                    <GitHubIcon className="w-4 h-4" />
+                  </a>
+                  <a href={SITE.linkedin} target="_blank" rel="noreferrer" className="hover:text-bone transition-colors" aria-label="LinkedIn">
+                    <LinkedInIcon className="w-4 h-4" />
+                  </a>
+                </div>
+              </figcaption>
+            </figure>
           )}
           <div className="grid grid-cols-3 gap-6">
             {stats.map((s) => (
