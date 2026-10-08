@@ -8,7 +8,6 @@ export function Hero({ lang }: { lang: Lang }) {
     <section id="top" className="relative overflow-hidden">
       <div className="mx-auto max-w-[1280px] px-6 md:px-10 pt-32 pb-24 md:pt-40 md:pb-36 grid lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
         <div className="relative z-10">
-          <p className="text-nav font-semibold uppercase text-saffron mb-8">{t.eyebrow}</p>
           <h1 className="text-display font-normal text-bone mb-8">{t.title}</h1>
           <p className="text-heading-xs font-normal text-bone mb-6 max-w-xl">{t.subtitle}</p>
           <p className="text-body font-extralight text-mist max-w-[480px] mb-12">{t.blurb}</p>

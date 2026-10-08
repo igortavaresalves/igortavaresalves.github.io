@@ -30,7 +30,6 @@ export const NAV = {
 
 export const HERO = {
   pt: {
-    eyebrow: "Aberto a novas oportunidades · Híbrido ou remoto",
     title: "Igor Tavares",
     subtitle: "Desenvolvedor Backend e Engenheiro de Sistemas de IA (LLMs e agentes)",
     blurb:
@@ -39,7 +38,6 @@ export const HERO = {
     ctaSecondary: { label: "Falar comigo", href: "#contato" },
   },
   en: {
-    eyebrow: "Open to new opportunities · Hybrid or remote",
     title: "Igor Tavares",
     subtitle: "Backend Developer and AI Systems Engineer (LLMs and agents)",
     blurb:
