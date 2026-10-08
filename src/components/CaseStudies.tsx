@@ -1,46 +1,38 @@
 import { CASE_STUDIES, type Lang } from "../content";
-import { SectionHeading } from "./SectionHeading";
+import { Bullet, SectionHeading } from "./SectionHeading";
 
 export function CaseStudies({ lang }: { lang: Lang }) {
   const cases = CASE_STUDIES[lang];
 
   return (
-    <section id="destaques" className="border-y border-border bg-bg-soft">
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-        <SectionHeading
-          kicker="02 · featured work"
-          title={lang === "pt" ? "Entregas em destaque" : "Featured deliveries"}
-        />
-        <div className="grid md:grid-cols-2 gap-6">
-          {cases.map((c) => (
-            <article
-              key={c.title}
-              className="rounded-2xl border border-border bg-surface p-7 hover:border-accent/40 transition-colors"
-            >
-              <p className="font-mono text-xs text-accent mb-3">{c.tag}</p>
-              <h3 className="text-xl font-semibold text-white mb-2">{c.title}</h3>
-              <p className="text-sm text-text-dim mb-5">{c.context}</p>
-              <ul className="space-y-3 mb-6">
-                {c.points.map((pt, i) => (
-                  <li key={i} className="flex gap-3 text-[14px] text-text leading-relaxed">
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+    <section id="destaques" className="mx-auto max-w-[1280px] px-6 md:px-10 py-24 md:py-32">
+      <SectionHeading
+        kicker={lang === "pt" ? "Entregas em destaque" : "Featured work"}
+        title={lang === "pt" ? "Do zero à produção." : "From zero to production."}
+      />
+
+      <div className="space-y-24 md:space-y-32">
+        {cases.map((c, i) => (
+          // Zigzag rhythm: alternate which side carries the headline.
+          <article key={c.title} className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+            <div className={i % 2 === 1 ? "lg:order-2" : ""}>
+              <p className="text-caption uppercase tracking-[0.025em] text-iris mb-4">{c.tag}</p>
+              <h3 className="text-heading font-normal text-bone mb-6">{c.title}</h3>
+              <p className="text-body font-extralight text-mist">{c.context}</p>
+            </div>
+            <div>
+              <ul className="space-y-5 mb-8">
+                {c.points.map((pt, j) => (
+                  <li key={j} className="flex gap-4 text-[16px] leading-relaxed font-light text-bone">
+                    <Bullet />
                     {pt}
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-wrap gap-2">
-                {c.stack.map((s) => (
-                  <span
-                    key={s}
-                    className="font-mono text-[11px] rounded-md border border-border px-2 py-1 text-text-dim"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
+              <p className="text-caption uppercase tracking-[0.025em] text-ash">{c.stack.join("  ·  ")}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

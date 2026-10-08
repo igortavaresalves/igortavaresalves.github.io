@@ -1,3 +1,18 @@
+export function LogoMark({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#8052ff" />
+          <stop offset="1" stopColor="#15846e" />
+        </linearGradient>
+      </defs>
+      <path d="M12 2 22 20H2Z" fill="url(#logo-grad)" />
+      <path d="M12 9.5 16.2 17H7.8Z" fill="#000" />
+    </svg>
+  );
+}
+
 export function GitHubIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">

@@ -1,68 +1,48 @@
 import { HERO, SITE, type Lang } from "../content";
+import { Constellation } from "./Constellation";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "./icons";
 
 export function Hero({ lang }: { lang: Lang }) {
   const t = HERO[lang];
 
   return (
-    <section id="top" className="relative overflow-hidden border-b border-border">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #ffffff08 1px, transparent 1px), linear-gradient(to bottom, #ffffff08 1px, transparent 1px)",
-          backgroundSize: "44px 44px",
-          maskImage: "radial-gradient(ellipse 70% 60% at 50% 0%, black 40%, transparent 100%)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, #5eead4, transparent 70%)" }}
-      />
+    <section id="top" className="relative overflow-hidden">
+      <div className="mx-auto max-w-[1280px] px-6 md:px-10 pt-32 pb-24 md:pt-40 md:pb-36 grid lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
+        <div className="relative z-10">
+          <p className="text-nav font-semibold uppercase text-saffron mb-8">{t.eyebrow}</p>
+          <h1 className="text-display font-normal text-bone mb-8">{t.title}</h1>
+          <p className="text-heading-xs font-normal text-bone mb-6 max-w-xl">{t.subtitle}</p>
+          <p className="text-body font-extralight text-mist max-w-[480px] mb-12">{t.blurb}</p>
 
-      <div className="relative mx-auto max-w-5xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 font-mono text-xs text-text-dim mb-8">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-          </span>
-          {t.eyebrow}
+          <div className="flex flex-wrap items-center gap-8 mb-14">
+            <a
+              href={t.ctaPrimary.href}
+              className="rounded-3xl bg-iris px-5 py-3.5 text-nav font-semibold uppercase text-bone hover:brightness-110 transition"
+            >
+              {t.ctaPrimary.label}
+            </a>
+            <a
+              href={t.ctaSecondary.href}
+              className="text-nav font-semibold uppercase text-ash hover:text-bone transition-colors"
+            >
+              {t.ctaSecondary.label} →
+            </a>
+          </div>
+
+          <div className="flex items-center gap-6 text-ash">
+            <a href={SITE.github} target="_blank" rel="noreferrer" className="hover:text-bone transition-colors" aria-label="GitHub">
+              <GitHubIcon />
+            </a>
+            <a href={SITE.linkedin} target="_blank" rel="noreferrer" className="hover:text-bone transition-colors" aria-label="LinkedIn">
+              <LinkedInIcon />
+            </a>
+            <a href={`mailto:${SITE.email}`} className="hover:text-bone transition-colors" aria-label="Email">
+              <MailIcon />
+            </a>
+          </div>
         </div>
 
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-4">
-          {t.title}
-        </h1>
-        <p className="text-lg md:text-xl text-accent font-medium mb-6">{t.subtitle}</p>
-        <p className="max-w-2xl mx-auto text-text-dim text-base md:text-lg leading-relaxed mb-10">
-          {t.blurb}
-        </p>
-
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-          <a
-            href={t.ctaPrimary.href}
-            className="rounded-lg bg-accent text-bg font-semibold px-5 py-2.5 text-sm hover:opacity-90 transition-opacity"
-          >
-            {t.ctaPrimary.label}
-          </a>
-          <a
-            href={t.ctaSecondary.href}
-            className="rounded-lg border border-border px-5 py-2.5 text-sm text-text hover:border-accent/50 hover:text-white transition-colors"
-          >
-            {t.ctaSecondary.label}
-          </a>
-        </div>
-
-        <div className="flex items-center justify-center gap-5 text-text-dim">
-          <a href={SITE.github} target="_blank" rel="noreferrer" className="hover:text-white transition-colors" aria-label="GitHub">
-            <GitHubIcon />
-          </a>
-          <a href={SITE.linkedin} target="_blank" rel="noreferrer" className="hover:text-white transition-colors" aria-label="LinkedIn">
-            <LinkedInIcon />
-          </a>
-          <a href={`mailto:${SITE.email}`} className="hover:text-white transition-colors" aria-label="Email">
-            <MailIcon />
-          </a>
-        </div>
+        <Constellation className="w-full h-[340px] sm:h-[460px] lg:h-[620px] lg:scale-110" />
       </div>
     </section>
   );
