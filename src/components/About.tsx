@@ -22,7 +22,7 @@ export function About({ lang }: { lang: Lang }) {
       <div className="grid lg:grid-cols-2 gap-16">
         <div className="self-start">
           {hasPhoto && (
-            // Profile card: portrait, role label and name, no frame or background.
+            // Profile card: portrait and name, no frame or background.
             <figure className="max-w-[420px] mb-16">
               <img
                 src={SITE.photo}
@@ -31,11 +31,8 @@ export function About({ lang }: { lang: Lang }) {
                 className="w-full aspect-[4/5] object-cover rounded-3xl mb-6"
               />
               <figcaption>
-                <p className="text-caption uppercase tracking-[0.025em] text-iris mb-2">
-                  {lang === "pt" ? "Backend & IA · " : "Backend & AI · "}
-                  {SITE.location[lang]}
-                </p>
-                <p className="text-heading-xs font-normal text-bone mb-3">{SITE.name}</p>
+                <p className="text-heading-xs font-normal text-bone">{SITE.name}</p>
+                <p className="text-nav text-ash mt-1 mb-3">{SITE.location[lang]}</p>
                 <div className="flex items-center gap-4 text-ash">
                   <a href={SITE.github} target="_blank" rel="noreferrer" className="hover:text-bone transition-colors" aria-label="GitHub">
                     <GitHubIcon className="w-4 h-4" />
