@@ -9,12 +9,15 @@ export function Projects({ lang }: { lang: Lang }) {
     <section id="projetos" className="mx-auto max-w-[1280px] px-6 md:px-10 py-24 md:py-32">
       <SectionHeading
         kicker={lang === "pt" ? "Projetos próprios" : "Personal projects"}
-        title={lang === "pt" ? "Laboratório de IA." : "AI lab."}
+        title={lang === "pt" ? "Ideias que viraram produto." : "Ideas turned into products."}
       />
 
       <div className="grid md:grid-cols-2 gap-x-16 gap-y-20">
         {projects.map((p) => (
           <div key={p.name}>
+            {p.highlight && (
+              <p className="text-nav font-semibold uppercase text-saffron mb-4">{p.highlight}</p>
+            )}
             <a
               href={p.href}
               target="_blank"

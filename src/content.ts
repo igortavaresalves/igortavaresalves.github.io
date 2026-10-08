@@ -203,6 +203,7 @@ export const EXPERIENCE: Record<Lang, Role[]> = {
 
 export type Project = {
   name: string;
+  highlight?: string;
   description: string;
   points: string[];
   stack: string[];
@@ -211,6 +212,19 @@ export type Project = {
 
 export const PROJECTS: Record<Lang, Project[]> = {
   pt: [
+    {
+      name: "LaunchTask",
+      highlight: "Case de sucesso · Em uso por 5 freelancers",
+      description: "Aplicativo de desktop para freelancers que atendem várias agências e clientes ao mesmo tempo. Junta demandas, timer, clientes e fechamento financeiro num só lugar, e hoje já faz parte da rotina de 5 freelancers.",
+      points: [
+        "Painel do dia, kanban, calendário e timeline para acompanhar as demandas, com o timer sempre à vista.",
+        "Cobrança por hora ou mensalidade fixa. Nos clientes de mensalidade, o app compara o esforço real com o valor combinado e mostra a margem.",
+        "Relatórios mensais e semanais, exportação em CSV e PDF e fatura gerada com os dados do profissional.",
+        "Funciona 100% offline: Tauri (Rust) com React, backend FastAPI rodando junto com o app e SQLite embarcado. Instala com um clique, sem Docker e sem servidor.",
+      ],
+      stack: ["Tauri 2", "Rust", "React 18", "TypeScript", "FastAPI", "SQLite", "Alembic", "pytest"],
+      href: "https://igortavaresalves.github.io/launchtask-case/",
+    },
     {
       name: "Strongify",
       description: "Plataforma SaaS para personal trainers e seus alunos. Projeto próprio, full-stack.",
@@ -256,6 +270,19 @@ export const PROJECTS: Record<Lang, Project[]> = {
     },
   ],
   en: [
+    {
+      name: "LaunchTask",
+      highlight: "Success case · Used by 5 freelancers",
+      description: "A desktop app for freelancers who work with several agencies and clients at once. It brings tasks, time tracking, clients and monthly billing together in one place, and it's already part of the daily routine of 5 freelancers.",
+      points: [
+        "Daily dashboard, kanban, calendar and timeline views to keep track of tasks, with the timer always in sight.",
+        "Hourly or fixed monthly billing. For monthly clients, the app compares actual effort with the agreed fee and shows the margin.",
+        "Monthly and weekly reports, CSV and PDF export, and invoices generated with the freelancer's details.",
+        "Works 100% offline: Tauri (Rust) with React, a FastAPI backend that runs alongside the app, and embedded SQLite. One-click install, no Docker, no server.",
+      ],
+      stack: ["Tauri 2", "Rust", "React 18", "TypeScript", "FastAPI", "SQLite", "Alembic", "pytest"],
+      href: "https://igortavaresalves.github.io/launchtask-case/",
+    },
     {
       name: "Strongify",
       description: "A SaaS platform for personal trainers and their students. Personal full-stack project.",
