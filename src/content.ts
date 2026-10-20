@@ -141,6 +141,7 @@ export const EXPERIENCE: Record<Lang, Role[]> = {
       org: "Deloitte",
       period: "Mar 2025 até hoje",
       points: [
+        "Atuo no ciclo completo de funcionalidades corporativas, da conversa com o cliente para levantar requisitos até a entrega. Desenvolvo APIs REST em C#, Python e TypeScript, comunicação em tempo real com WebSocket, frontend em React e persistência no CosmosDB.",
         "Propus e implementei controle de acesso baseado em papéis (RBAC), com proteção no nível de cada campo.",
         "Proteção contra SQL injection e detecção de requisições manipuladas de forma maliciosa.",
         "Participo ativamente das decisões de arquitetura do time. As entregas em destaque acima são desse período.",
@@ -173,6 +174,7 @@ export const EXPERIENCE: Record<Lang, Role[]> = {
       org: "Deloitte",
       period: "Mar 2025 to present",
       points: [
+        "I work across the full development cycle of corporate features, from gathering requirements with the client to delivery. I build REST APIs in C#, Python and TypeScript, real-time communication over WebSocket, React frontends and CosmosDB-backed persistence.",
         "Proposed and implemented role-based access control (RBAC), with protection down to individual fields.",
         "SQL injection protection and detection of maliciously tampered requests.",
         "I take an active part in the team's architecture decisions. The featured work above comes from this role.",
@@ -333,11 +335,11 @@ export const SKILLS = {
   pt: [
     {
       category: "IA & LLM",
-      items: ["Engenharia de prompts", "Saída estruturada (JSON schema)", "RAG e geração ancorada", "Arquitetura multiagente", "LiteLLM", "LangGraph", "Groq", "Tavily"],
+      items: ["Engenharia de prompts", "Saída estruturada (JSON schema)", "RAG e geração ancorada", "Arquitetura multiagente", "LiteLLM", "LangGraph", "Hugging Face", "Groq", "Tavily", "Azure AI"],
     },
     {
       category: "Backend & APIs",
-      items: ["Python", "FastAPI", "C#", "C++", "ADVPL", "REST", "Arquitetura MVC", "JWT"],
+      items: ["Python", "FastAPI", "C#", "C++", "ADVPL", "REST", "WebSocket", "Arquitetura MVC", "JWT"],
     },
     {
       category: "Frontend",
@@ -345,21 +347,21 @@ export const SKILLS = {
     },
     {
       category: "Dados",
-      items: ["SQL Server", "Oracle PL/SQL", "MongoDB", "Power BI", "Pandas", "NumPy"],
+      items: ["SQL Server", "Oracle PL/SQL", "MongoDB", "CosmosDB", "Power BI", "Pandas", "NumPy"],
     },
     {
       category: "Infra & Cloud",
-      items: ["Docker", "Azure", "AWS", "Git e GitHub", "Power Automate"],
+      items: ["Docker", "Azure", "AWS", "Git e GitHub", "Power Automate", "n8n"],
     },
   ],
   en: [
     {
       category: "AI & LLM",
-      items: ["Prompt engineering", "Structured output (JSON schema)", "RAG and grounded generation", "Multi-agent architecture", "LiteLLM", "LangGraph", "Groq", "Tavily"],
+      items: ["Prompt engineering", "Structured output (JSON schema)", "RAG and grounded generation", "Multi-agent architecture", "LiteLLM", "LangGraph", "Hugging Face", "Groq", "Tavily", "Azure AI"],
     },
     {
       category: "Backend & APIs",
-      items: ["Python", "FastAPI", "C#", "C++", "ADVPL", "REST", "MVC architecture", "JWT"],
+      items: ["Python", "FastAPI", "C#", "C++", "ADVPL", "REST", "WebSocket", "MVC architecture", "JWT"],
     },
     {
       category: "Frontend",
@@ -367,11 +369,11 @@ export const SKILLS = {
     },
     {
       category: "Data",
-      items: ["SQL Server", "Oracle PL/SQL", "MongoDB", "Power BI", "Pandas", "NumPy"],
+      items: ["SQL Server", "Oracle PL/SQL", "MongoDB", "CosmosDB", "Power BI", "Pandas", "NumPy"],
     },
     {
       category: "Infra & Cloud",
-      items: ["Docker", "Azure", "AWS", "Git and GitHub", "Power Automate"],
+      items: ["Docker", "Azure", "AWS", "Git and GitHub", "Power Automate", "n8n"],
     },
   ],
 };
