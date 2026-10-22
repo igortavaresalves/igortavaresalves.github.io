@@ -141,8 +141,9 @@ export const EXPERIENCE: Record<Lang, Role[]> = {
       org: "Deloitte",
       period: "Mar 2025 a Out 2026",
       points: [
-        "Desenvolvi agentes de IA em ambiente corporativo, incluindo uma funcionalidade que permite ao próprio usuário criar o seu agente, combinando as ferramentas já integradas ao sistema e outros agentes. Testei e avaliei os agentes com Arize Phoenix, acompanhando diversas métricas de análise.",
-        "Atuei no ciclo completo de funcionalidades corporativas, da conversa com o cliente para levantar requisitos até a entrega. Desenvolvi APIs REST em C#, Python e TypeScript, comunicação em tempo real com WebSocket, frontend em React e persistência no CosmosDB.",
+        "Desenvolvi agentes de IA e uma funcionalidade em que o próprio usuário cria o seu agente, combinando as ferramentas e os agentes que o sistema já oferece. Avaliei a qualidade de cada agente com Arize Phoenix.",
+        "Entreguei um chat em tempo real em que o usuário conversa com modelos de LLM e com os agentes do sistema.",
+        "Levei funcionalidades da conversa com o cliente até a produção, com APIs REST em C#, Python e TypeScript, tempo real via WebSocket, frontend em React e dados no CosmosDB.",
         "Propus e implementei controle de acesso baseado em papéis (RBAC), com proteção no nível de cada campo.",
         "Proteção contra SQL injection e detecção de requisições manipuladas de forma maliciosa.",
         "Participei ativamente das decisões de arquitetura do time. As entregas em destaque acima são desse período.",
@@ -175,8 +176,9 @@ export const EXPERIENCE: Record<Lang, Role[]> = {
       org: "Deloitte",
       period: "Mar 2025 to Oct 2026",
       points: [
-        "Developed AI agents in a corporate environment, including a feature that lets users create their own agent by combining tools already integrated into the system and other agents. Tested and evaluated the agents with Arize Phoenix, tracking a range of analysis metrics.",
-        "I worked across the full development cycle of corporate features, from gathering requirements with the client to delivery. I built REST APIs in C#, Python and TypeScript, real-time communication over WebSocket, React frontends and CosmosDB-backed persistence.",
+        "Developed AI agents and a feature that lets users create their own agent by combining the tools and agents the system already offers. Evaluated each agent's quality with Arize Phoenix.",
+        "Delivered a real-time chat where users talk to LLM models and to the system's agents.",
+        "Took features from the first conversation with the client to production, with REST APIs in C#, Python and TypeScript, real-time over WebSocket, a React frontend and data in CosmosDB.",
         "Proposed and implemented role-based access control (RBAC), with protection down to individual fields.",
         "SQL injection protection and detection of maliciously tampered requests.",
         "I took an active part in the team's architecture decisions. The featured work above comes from this role.",
