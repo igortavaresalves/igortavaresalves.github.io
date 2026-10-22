@@ -49,14 +49,14 @@ export const HERO = {
 
 export const ABOUT = {
   pt: [
-    "Sou Desenvolvedor Backend e Analista de Sistemas, com mais de 10 anos de carreira em TI. Boa parte desse tempo foi dedicada a desenvolvimento, integrações e automação de dados em ambientes corporativos. Hoje trabalho em projetos com foco em segurança de aplicações, controle de acesso e arquitetura de sistemas.",
+    "Sou Desenvolvedor Backend e Analista de Sistemas, com mais de 10 anos de carreira em TI. Boa parte desse tempo foi dedicada a desenvolvimento, integrações e automação de dados em ambientes corporativos. Na Deloitte, trabalhei em projetos com foco em segurança de aplicações, controle de acesso e arquitetura de sistemas.",
     "Nos últimos tempos tenho investido bastante em Inteligência Artificial aplicada, principalmente em projetos próprios. Projetei arquiteturas de geração com LLMs que não ficam presas a um único provedor, com validação rigorosa das respostas e geração baseada em uma base de conhecimento própria. Também coloquei no ar assistentes de busca, chats e agentes de IA.",
-    "O que eu busco agora é juntar essa base sólida de backend com a capacidade de levar sistemas de IA generativa da ideia até a produção. E, no meu trabalho atual, também ganhei bastante experiência com frontend moderno em entregas grandes.",
+    "O que eu busco agora é juntar essa base sólida de backend com a capacidade de levar sistemas de IA generativa da ideia até a produção. Na Deloitte, também ganhei bastante experiência com frontend moderno em entregas grandes.",
   ],
   en: [
-    "I'm a Backend Developer and Systems Analyst with over 10 years in IT. Most of that time went into development, integrations and data automation for corporate environments. Today I work on projects focused on application security, access control and system architecture.",
+    "I'm a Backend Developer and Systems Analyst with over 10 years in IT. Most of that time went into development, integrations and data automation for corporate environments. At Deloitte, I worked on projects focused on application security, access control and system architecture.",
     "Lately I've been investing a lot in applied AI, mostly through my own projects. I've designed LLM generation architectures that aren't tied to a single provider, with strict output validation and generation grounded in a custom knowledge base. I've also shipped search assistants, chat apps and AI agents.",
-    "What I'm looking for now is to combine that solid backend foundation with the ability to take generative AI systems from idea to production. In my current role I've also gained a lot of hands-on experience with modern frontend on large deliveries.",
+    "What I'm looking for now is to combine that solid backend foundation with the ability to take generative AI systems from idea to production. At Deloitte I also gained a lot of hands-on experience with modern frontend on large deliveries.",
   ],
 };
 
@@ -139,12 +139,13 @@ export const EXPERIENCE: Record<Lang, Role[]> = {
     {
       title: "Analista de Sistemas Pleno",
       org: "Deloitte",
-      period: "Mar 2025 até hoje",
+      period: "Mar 2025 a Out 2026",
       points: [
-        "Atuo no ciclo completo de funcionalidades corporativas, da conversa com o cliente para levantar requisitos até a entrega. Desenvolvo APIs REST em C#, Python e TypeScript, comunicação em tempo real com WebSocket, frontend em React e persistência no CosmosDB.",
+        "Desenvolvi agentes de IA em ambiente corporativo, incluindo uma funcionalidade que permite ao próprio usuário criar o seu agente, combinando as ferramentas já integradas ao sistema e outros agentes. Testei e avaliei os agentes com Arize Phoenix, acompanhando diversas métricas de análise.",
+        "Atuei no ciclo completo de funcionalidades corporativas, da conversa com o cliente para levantar requisitos até a entrega. Desenvolvi APIs REST em C#, Python e TypeScript, comunicação em tempo real com WebSocket, frontend em React e persistência no CosmosDB.",
         "Propus e implementei controle de acesso baseado em papéis (RBAC), com proteção no nível de cada campo.",
         "Proteção contra SQL injection e detecção de requisições manipuladas de forma maliciosa.",
-        "Participo ativamente das decisões de arquitetura do time. As entregas em destaque acima são desse período.",
+        "Participei ativamente das decisões de arquitetura do time. As entregas em destaque acima são desse período.",
       ],
     },
     {
@@ -172,12 +173,13 @@ export const EXPERIENCE: Record<Lang, Role[]> = {
     {
       title: "Mid-level Systems Analyst",
       org: "Deloitte",
-      period: "Mar 2025 to present",
+      period: "Mar 2025 to Oct 2026",
       points: [
-        "I work across the full development cycle of corporate features, from gathering requirements with the client to delivery. I build REST APIs in C#, Python and TypeScript, real-time communication over WebSocket, React frontends and CosmosDB-backed persistence.",
+        "Developed AI agents in a corporate environment, including a feature that lets users create their own agent by combining tools already integrated into the system and other agents. Tested and evaluated the agents with Arize Phoenix, tracking a range of analysis metrics.",
+        "I worked across the full development cycle of corporate features, from gathering requirements with the client to delivery. I built REST APIs in C#, Python and TypeScript, real-time communication over WebSocket, React frontends and CosmosDB-backed persistence.",
         "Proposed and implemented role-based access control (RBAC), with protection down to individual fields.",
         "SQL injection protection and detection of maliciously tampered requests.",
-        "I take an active part in the team's architecture decisions. The featured work above comes from this role.",
+        "I took an active part in the team's architecture decisions. The featured work above comes from this role.",
       ],
     },
     {
@@ -335,7 +337,7 @@ export const SKILLS = {
   pt: [
     {
       category: "IA & LLM",
-      items: ["Engenharia de prompts", "Saída estruturada (JSON schema)", "RAG e geração ancorada", "Arquitetura multiagente", "LiteLLM", "LangGraph", "Hugging Face", "Groq", "Tavily", "Azure AI"],
+      items: ["Engenharia de prompts", "Saída estruturada (JSON schema)", "RAG e geração ancorada", "Arquitetura multiagente", "LiteLLM", "LangGraph", "Hugging Face", "Groq", "Tavily", "Azure AI", "Arize Phoenix"],
     },
     {
       category: "Backend & APIs",
@@ -357,7 +359,7 @@ export const SKILLS = {
   en: [
     {
       category: "AI & LLM",
-      items: ["Prompt engineering", "Structured output (JSON schema)", "RAG and grounded generation", "Multi-agent architecture", "LiteLLM", "LangGraph", "Hugging Face", "Groq", "Tavily", "Azure AI"],
+      items: ["Prompt engineering", "Structured output (JSON schema)", "RAG and grounded generation", "Multi-agent architecture", "LiteLLM", "LangGraph", "Hugging Face", "Groq", "Tavily", "Azure AI", "Arize Phoenix"],
     },
     {
       category: "Backend & APIs",
